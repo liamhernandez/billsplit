@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<title>billsplit by Liam</title>
+	<link rel="stylesheet" type="text/css" href="https://liamism.com/liamism.css">
+</head>
+
+<body>
+	<h1>billsplit.liamism.com</h1>
+	<p>This is a bill-splitting calculator that uses the subtotal of each party to proportionally split the tax and tip.
+	</p>
+	<main>
+		<h2>Hi, please add all line items under each party. You can add more parties as needed.</h2>
+		<form id="splitBillForm" onsubmit="splitBill()">
+			<h2>Party Information</h2>
+			<div class="form-group">
+				<label for="partyName">Party Name:</label>
+				<input type="text" class="form-control" id="partyName" name="partyName" required>
+			</div>
+			<h2>Line Items</h2>
+			<div id="lineItems">
+				<div class="form-group line-item">
+					<label for="itemName">Item Name (Optional):</label>
+					<input type="text" class="form-control" id="itemName1" name="itemName[]"
+						placeholder="Enter item name (optional)">
+				</div>
+				<div class="form-group line-item">
+					<label for="amount">Amount:</label>
+					<input type="number" class="form-control" id="amount1" name="amount[]" required>
+				</div>
+
+				<div class="form-group line-item">
+					<label for="itemName">Item Name (Optional):</label>
+					<input type="text" class="form-control" id="itemName2" name="itemName[]"
+						placeholder="Enter item name (optional)">
+				</div>
+				<div class="form-group line-item">
+					<label for="amount">Amount:</label>
+					<input type="number" class="form-control" id="amount2" name="amount[]" required>
+				</div>
+
+				<div class="form-group line-item">
+					<label for="itemName">Item Name (Optional):</label>
+					<input type="text" class="form-control" id="itemName3" name="itemName[]"
+						placeholder="Enter item name (optional)">
+				</div>
+				<div class="form-group line-item">
+					<label for="amount">Amount:</label>
+					<input type="number" class="form-control" id="amount3" name="amount[]" required>
+				</div>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Split Bill</button>
+		</form>
+
+
+</body>
+<script src="billsplit.js"></script>
+
+</html>
